@@ -1,0 +1,48 @@
+#######################################
+# Syntax Coloring Map For Test
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+AhmsvilleDial	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################		
+
+set_inputPins	KEYWORD2
+set_touchTypeThresholds	KEYWORD2
+set_touchDetectionThreshold	KEYWORD2
+set_knobPoleStateValues	KEYWORD2
+initialize_ahmsvilleDial	KEYWORD2
+initialize_ahmsvilleDialCustom	KEYWORD2
+set_haptics	KEYWORD2
+capTouch	KEYWORD2
+capTouch_single	KEYWORD2
+knob	KEYWORD2
+knob2	KEYWORD2
+spaceNav_raw	KEYWORD2
+spaceNav_simple	KEYWORD2
+Mkey	KEYWORD2
+normalize	KEYWORD2
+get_knobState	KEYWORD2
+setknobresolution	KEYWORD2
+dialCommand	KEYWORD2
+dialCommand_keyPress	KEYWORD2
+dialCommand_movePointer	KEYWORD2
+dialCommand_mouseClick	KEYWORD2
+dialCommand_mousePress	KEYWORD2
+dialCommand_Release	KEYWORD2
+set_touchAutoSensitivity	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+ahmsville_dial	LITERAL1
