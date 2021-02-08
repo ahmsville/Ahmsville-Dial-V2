@@ -71,7 +71,7 @@ delay(500);
 void AhmsvilleDial::initialize_ahmsvilleDial() {
 	setknobinterrupt();
 
-	set_haptics(4, 60, 10, 10, 150);
+	set_haptics(4, 60, 20, 5, 175); //int pin, int durationtouch, int durationknob, int durationspacenav, int strength
    
 	AhmsvilleDial_Knob.initialize_encoder();
 
@@ -81,7 +81,7 @@ void AhmsvilleDial::initialize_ahmsvilleDial() {
 
 	AhmsvilleDial_Spacenav.set_XYSensorPins(A5, A4);
 	AhmsvilleDial_Spacenav.set_adaptiveSpaceNavigation(true);
-	AhmsvilleDial_Spacenav.set_slideBoundaryRadii(30.0, 3);
+	AhmsvilleDial_Spacenav.set_slideBoundaryRadii(30.0, 5);
 	AhmsvilleDial_Spacenav.set_tiltBoundaryRadii(30.0 ,3);
 	
 	AhmsvilleDial_Spacenav.initialize_spaceNav();
@@ -142,19 +142,19 @@ int AhmsvilleDial::capTouch_single(int pad) {
 }
 
 int AhmsvilleDial::knob() {
-	int knob = 0;
+	knobcount = 0;
 	if (knob1setres == 0) {
-		knob = AhmsvilleDial_Knob.detect_rotationWithRate();
+		knobcount = AhmsvilleDial_Knob.detect_rotationWithRate();
 	}
 	else {
-		knob = AhmsvilleDial_Knob.detect_rotationHR();
+		knobcount = AhmsvilleDial_Knob.detect_rotationHR();
 	}
 	
-	if (knob != 0) {
+	if (knobcount != 0) {
 		AhmsvilleDial_Knob.setsleep(false);
 	}
 
-	return knob;
+	return knobcount;
 }
 
 
@@ -165,7 +165,7 @@ void AhmsvilleDial::normalize() {
 	
 	
 #if DIAL_VERSION == 2 || DIAL_VERSION == 4
-	AhmsvilleDial_Mkey.reset_macroKey();
+	//AhmsvilleDial_Mkey.reset_macroKey();
 #endif // 0	
 
 #if DIAL_VERSION == 3 || DIAL_VERSION == 4
@@ -180,7 +180,7 @@ void AhmsvilleDial::setknobresolution(int res_percent, int knobnum) {
 		AhmsvilleDial_Knob.set_resolution(res_percent);
 		knob1setres = res_percent;
 	}
-	else if (knobnum = 2) {
+	else if (knobnum == 2) {
 #if DIAL_VERSION == 3 || DIAL_VERSION == 4
 		AhmsvilleDial_Knob2.set_resolution(res_percent);
 		knob2setres = res_percent;
@@ -202,15 +202,15 @@ int AhmsvilleDial::get_knobState(int sensornum) {
 
 #if DIAL_VERSION == 3 || DIAL_VERSION == 4
 int AhmsvilleDial::knob2() {
-	int knob2 = 0;
+    knob2count = 0;
 	if (knob2setres == 0) {
-		knob2 = AhmsvilleDial_Knob2.detect_rotationWithRate();
+		knob2count = AhmsvilleDial_Knob2.detect_rotationWithRate();
 	}
 	else {
-		knob2 = AhmsvilleDial_Knob2.detect_rotationHR();
+		knob2count = AhmsvilleDial_Knob2.detect_rotationHR();
 	}
 
-	return knob2;
+	return knob2count;
 }
 
 float *AhmsvilleDial::spaceNav_raw() {
