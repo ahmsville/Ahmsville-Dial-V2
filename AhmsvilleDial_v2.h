@@ -82,7 +82,7 @@ private:
 
 	
 	AdvCapTouch AhmsvilleDial_Touch;  //create a new captouch instance
-
+	int knobcount = 0, knob2count = 0;
 	int knob1setres = 0; 
 
 public:
