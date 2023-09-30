@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map For Test
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SpaceNavigator	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################		
+
+initialize_spaceNav	KEYWORD2
+set_XYSensorPins	KEYWORD2
+set_adaptiveSpaceNavigation	KEYWORD2
+set_tiltBoundaryRadii	KEYWORD2
+set_slideBoundaryRadii	KEYWORD2
+set_orientationOffset	KEYWORD2
+get_gyroCoordinates	KEYWORD2
+get_planarCoordinates	KEYWORD2
+get_Tilt	KEYWORD2
+get_Slide	KEYWORD2
+reset_spaceNav	KEYWORD2
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
