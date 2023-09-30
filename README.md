@@ -17,4 +17,4 @@ RF24 - https://github.com/nRF24/RF24
 
 Companion App - https://github.com/ahmsville/Ahmsville-Dial-App
 
-**3D Files** - https://gum.co/bkgfu
+**3D Printing Files** - https://gum.co/bkgfu
