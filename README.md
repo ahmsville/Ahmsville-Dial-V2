@@ -1,3 +1,5 @@
+# This Repository contains everything you need to build or customize your very own Ahmsville Dial.
+
 ## BUILD INSTRUCTIONS
  - https://www.ahmsvillelabs.io/ahmsvilledialbuild
 
